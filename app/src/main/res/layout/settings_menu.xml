@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="harmon.osu.appname.SettingsMenu">
+    tools:context="harmon.osu.appname.SettingsMenuActivity">
 
     <TextView
         android:id="@+id/textView"
@@ -40,7 +40,7 @@
         app:layout_constraintTop_toBottomOf="@+id/playback_button" />
 
     <Button
-        android:id="@+id/mode_button"
+        android:id="@+id/gen_setting_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"

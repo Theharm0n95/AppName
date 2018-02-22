@@ -1,9 +1,11 @@
 <resources>
     <string name="app_name">AppName</string>
     <string name="menu_font_size">35</string>
+    <string name="main_font_size">70</string>
     <string name="left_just">0.124</string>
     <string name="upper_bound">.034</string>
     <string name="photos">Photos</string>
     <string name="take_picture">Take Picture</string>
     <string name="settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
 </resources>
