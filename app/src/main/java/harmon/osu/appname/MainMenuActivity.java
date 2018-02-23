@@ -23,7 +23,7 @@ public class MainMenuActivity extends AppCompatActivity {
         mSettingsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setContentView(R.layout.settings_menu);
+
             }
         });
 

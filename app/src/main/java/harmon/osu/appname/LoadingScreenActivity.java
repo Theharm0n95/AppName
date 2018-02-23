@@ -5,9 +5,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.util.Log;
+import android.widget.LinearLayout;
 
 public class LoadingScreenActivity extends AppCompatActivity {
 
+    private LinearLayout mLoadingLayout = (LinearLayout) findViewById(R.id.loading_screen);
     private Button mMuffinButton = (Button) findViewById(R.id.muffin_button);
     private String TAG = "AppName";
 
@@ -20,7 +22,7 @@ public class LoadingScreenActivity extends AppCompatActivity {
         mMuffinButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setContentView(R.layout.main_menu);
+
             }
         });
     }
