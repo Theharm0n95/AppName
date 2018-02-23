@@ -6,47 +6,43 @@
     android:layout_height="match_parent"
     tools:context="harmon.osu.appname.SettingsMenuActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <LinearLayout
+        android:layout_width="309dp"
+        android:layout_height="436dp"
         android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Settings"
-        android:textSize="@string/menu_font_size"
+        android:gravity="start"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.176"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.076" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/playback_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Playback"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        <TextView
+            android:id="@+id/settings_menu_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings"
+            android:textSize="35dp" />
 
-    <Button
-        android:id="@+id/color_mood_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Color and Mood"
-        app:layout_constraintStart_toStartOf="@+id/playback_button"
-        app:layout_constraintTop_toBottomOf="@+id/playback_button" />
+        <Button
+            android:id="@+id/music_settings_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/playback" />
 
-    <Button
-        android:id="@+id/gen_setting_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="General"
-        app:layout_constraintStart_toStartOf="@+id/color_mood_button"
-        app:layout_constraintTop_toBottomOf="@+id/color_mood_button" />
+        <Button
+            android:id="@+id/relationship_settings_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/relationship_settings" />
 
-
+        <Button
+            android:id="@+id/general_settings_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/general_settings" />
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>

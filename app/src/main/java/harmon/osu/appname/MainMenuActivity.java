@@ -12,20 +12,13 @@ import android.support.v7.app.AppCompatActivity;
 
 public class MainMenuActivity extends AppCompatActivity {
 
-    private Button mSettingsButton = findViewById(R.id.settings_button);
-    private String TAG = "MainMenu";
+    //Button mSettingsButton = findViewById(R.id.settings_menu_button);
+    String TAG = "MainMenu";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_menu);
-
-        mSettingsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
 
     }
 

@@ -8,9 +8,10 @@ import android.os.Bundle;
 
 public class SettingsMenuActivity extends AppCompatActivity {
 
-    private Button mPlaybackButton = (Button) findViewById(R.id.playback_button);
-    private Button mColorButton = (Button) findViewById(R.id.color_mood_button);
-    private Button mGeneralButton = (Button) findViewById(R.id.gen_setting_button);
+    private Button mPlaybackButton = (Button) findViewById(R.id.play_menu_button);
+    private Button mColorButton = (Button) findViewById(R.id.relationship_settings_button);
+    private Button mGeneralButton = (Button) findViewById(R.id.general_settings_button);
+
     private String TAG = "SettingsMenu";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
