@@ -8,33 +8,11 @@ import android.os.Bundle;
 
 public class SettingsMenuActivity extends AppCompatActivity {
 
-    private Button mPlaybackButton = (Button) findViewById(R.id.play_menu_button);
-    private Button mColorButton = (Button) findViewById(R.id.relationship_settings_button);
-    private Button mGeneralButton = (Button) findViewById(R.id.general_settings_button);
-
     private String TAG = "SettingsMenu";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings_menu);
-
-        mPlaybackButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-            }
-        });
-
-        mColorButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-            }
-        });
-
-        mGeneralButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-            }
-        });
 
     }
 

@@ -1,5 +1,6 @@
 package harmon.osu.appname;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -50,5 +51,10 @@ public class MainMenuActivity extends AppCompatActivity {
     protected void onDestroy(){
         Log.d(TAG, "onDestroy() Called");
         super.onDestroy();
+    }
+
+    public void toSettings(View v){
+        Intent i = new Intent(this,SettingsMenuActivity.class);
+        startActivity(i);
     }
 }

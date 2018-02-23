@@ -16,7 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SettingsMenuActivity" />
+        <activity android:name=".SettingsMenuActivity"
+            android:parentActivityName=".MainMenuActivity"/>
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".MainMenuActivity" />
         <activity android:name=".LoadingScreenActivity">
         </activity>
     </application>
