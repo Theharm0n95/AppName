@@ -26,6 +26,8 @@
         </activity>
         <activity android:name=".TakePictureActivity"
             android:parentActivityName=".MainMenuActivity"/>
+        <activity android:name=".AverageColorActivity"
+            android:parentActivityName=".MainMenuActivity"/>
     </application>
 
 </manifest>

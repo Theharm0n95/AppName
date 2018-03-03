@@ -20,8 +20,6 @@ import java.util.Calendar;
 public class TakePictureActivity extends AppCompatActivity {
     final int PHOTO_CODE = 0;
     private static String file = "";
-    //Button mSettingsButton = findViewById(R.id.settings_menu_button);
-    String TAG = "MainMenu";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,22 +50,29 @@ public class TakePictureActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
+        // Check if photo was successful
         if (requestCode == PHOTO_CODE && resultCode == RESULT_OK) {
-            Log.d("CameraDemo", "Pic saved");
+            // Go to AverageColor
+            Intent i = new Intent(this,AverageColorActivity.class);
+            startActivity(i);
+            finish();
         } else {
             File unusedFile = new File(file);
             // Delete unused photo file
             unusedFile.delete();
+            // Return to MainMenu
+            Intent i = new Intent(this,MainMenuActivity.class);
+            startActivity(i);
+            finish();
         }
     }
 
     /**
-     * Returns a string to the last file created.
+     * Returns a string to the last file attempted to create.
      *
      * @return last made photo as string
      */
-    public String getFile(){
+    public static String getFile(){
         return file;
     }
 }
