@@ -65,26 +65,8 @@ public class MainMenuActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-    public void takePicture(View v) {
-        // Create photo directory
-        final String dir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES) + "/" + getString(R.string.app_name) + "/pictures/";
-        File newdir = new File(dir);
-        newdir.mkdirs();
-        // Make new file
-        String file = dir + Calendar.getInstance().getTime().toString() +".jpg";
-        File newfile = new File(file);
-        try {
-            newfile.createNewFile();
-        }
-        catch (IOException e)
-        {
-        }
-        // Take photo
-        Uri outputFileUri = Uri.fromFile(newfile);
-
-        Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, outputFileUri);
-
-        startActivity(cameraIntent);
+    public void toTakePicture(View v) {
+        Intent i = new Intent(this,TakePictureActivity.class);
+        startActivity(i);
     }
 }

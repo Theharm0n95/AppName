@@ -24,6 +24,8 @@
             android:value=".MainMenuActivity" />
         <activity android:name=".LoadingScreenActivity">
         </activity>
+        <activity android:name=".TakePictureActivity"
+            android:parentActivityName=".MainMenuActivity"/>
     </application>
 
 </manifest>
