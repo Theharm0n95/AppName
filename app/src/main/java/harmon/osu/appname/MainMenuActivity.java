@@ -13,7 +13,6 @@ import android.support.v7.app.AppCompatActivity;
 
 public class MainMenuActivity extends AppCompatActivity {
 
-    //Button mSettingsButton = findViewById(R.id.settings_menu_button);
     String TAG = "MainMenu";
 
     @Override
