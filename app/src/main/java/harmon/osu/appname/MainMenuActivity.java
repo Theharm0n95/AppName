@@ -1,11 +1,18 @@
 package harmon.osu.appname;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.support.v7.app.AppCompatActivity;
+import java.util.Calendar;
+
+import java.io.File;
+import java.io.IOException;
 
 /**
  * Created by Justin on 2/19/2018.
@@ -54,6 +61,11 @@ public class MainMenuActivity extends AppCompatActivity {
 
     public void toSettings(View v){
         Intent i = new Intent(this,SettingsMenuActivity.class);
+        startActivity(i);
+    }
+
+    public void toTakePicture(View v) {
+        Intent i = new Intent(this,TakePictureActivity.class);
         startActivity(i);
     }
 }

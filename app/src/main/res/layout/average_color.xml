@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="harmon.osu.appname.MainMenuActivity">
+    tools:context="harmon.osu.appname.AverageColorActivity">
 
     <LinearLayout
         android:layout_width="368dp"
@@ -17,42 +17,34 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
-        <TextView
-            android:id="@+id/main_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/app_name"
-            android:textSize="35dp"/>
+
+        <View
+            android:id="@+id/color_square"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentTop="true"
+            android:background="#DDDDDD"
+            android:visibility="visible" />
 
         <Button
             android:id="@+id/play_menu_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/play_music" />
+            android:text="@string/play" />
 
         <Button
             android:id="@+id/camera_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="toTakePicture"
-            android:text="@string/take_picture" />
+            android:text="@string/retake_picture" />
 
-        <Button
-            android:id="@+id/photo_gallery"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/photos" />
 
-        <Button
-            android:id="@+id/settings_menu_button"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="toSettings"
-            android:text="@string/settings" />
     </LinearLayout>
 
 

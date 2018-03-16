@@ -10,5 +10,7 @@
     <string name="general_settings">General</string>
     <string name="relationship_settings">Mood/Genre</string>
     <string name="play_music">Now Playing</string>
+    <string name="retake_picture">Retake Picture</string>
+    <string name="play">Play</string>
 
 </resources>
