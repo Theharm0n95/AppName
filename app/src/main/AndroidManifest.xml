@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="harmon.osu.appname">
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>1
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    1
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,17 +19,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SettingsMenuActivity"
-            android:parentActivityName=".MainMenuActivity"/>
+        <activity
+            android:name=".SettingsMenuActivity"
+            android:parentActivityName=".MainMenuActivity" />
+
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
             android:value=".MainMenuActivity" />
-        <activity android:name=".LoadingScreenActivity">
-        </activity>
-        <activity android:name=".TakePictureActivity"
-            android:parentActivityName=".MainMenuActivity"/>
-        <activity android:name=".AverageColorActivity"
-            android:parentActivityName=".MainMenuActivity"/>
+
+        <activity android:name=".LoadingScreenActivity"></activity>
+        <activity
+            android:name=".TakePictureActivity"
+            android:parentActivityName=".MainMenuActivity" />
+        <activity
+            android:name=".AverageColorActivity"
+            android:parentActivityName=".MainMenuActivity" />
+        <activity android:name=".PhotoGalleryActivity"></activity>
     </application>
 
 </manifest>

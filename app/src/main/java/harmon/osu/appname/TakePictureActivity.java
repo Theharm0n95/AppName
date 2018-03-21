@@ -32,6 +32,7 @@ public class TakePictureActivity extends AppCompatActivity {
         String time = Calendar.getInstance().getTime().toString();
         file = dir + time +".jpg";
         File newfile = new File(file);
+
         try {
             newfile.createNewFile();
         }
