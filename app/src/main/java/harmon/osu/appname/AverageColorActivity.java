@@ -20,8 +20,10 @@ public class AverageColorActivity extends AppCompatActivity {
         setContentView(R.layout.average_color);
         String file = TakePictureActivity.getFile();
         String averageColor = CalculateAverageColor.getAverageColor(file);
+        String closestColor = FindClosestColor.getClosestColor(averageColor, this);
         View colorBox = (View) this.findViewById(R.id.color_square);
-        colorBox.setBackgroundColor(Color.parseColor(averageColor));
+        //TODO: Change back to using averageColor instead of closestColor
+        colorBox.setBackgroundColor(Color.parseColor(closestColor));
 
     }
 
