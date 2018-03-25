@@ -17,9 +17,8 @@ public class GalleryAdapter extends BaseAdapter {
     private Context imgContext;
     private Gallery imgGallery;
 
-    public GalleryAdapter(Context c, Gallery g){
+    public GalleryAdapter(Context c){
         this.imgContext = c;
-        this.imgGallery = g;
     }
 
     public View getView(int i, View v, ViewGroup g) {

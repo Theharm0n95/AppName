@@ -12,7 +12,7 @@ public class PhotoGalleryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_photo_gallery);
 
         GridView mPhotoGrid = findViewById(R.id.photo_gallery_grid);
-        mPhotoGrid.setAdapter(new GalleryAdapter(this, new Gallery()));
+        mPhotoGrid.setAdapter(new GalleryAdapter(this));
 
     }
 }
