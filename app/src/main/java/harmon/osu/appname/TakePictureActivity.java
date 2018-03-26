@@ -55,6 +55,7 @@ public class TakePictureActivity extends AppCompatActivity {
         if (requestCode == PHOTO_CODE && resultCode == RESULT_OK) {
             // Go to AverageColor
             Intent i = new Intent(this,AverageColorActivity.class);
+            i.putExtra("file", file);
             startActivity(i);
             finish();
         } else {
@@ -68,12 +69,4 @@ public class TakePictureActivity extends AppCompatActivity {
         }
     }
 
-    /**
-     * Returns a string to the last file attempted to create.
-     *
-     * @return last made photo as string
-     */
-    public static String getFile(){
-        return file;
-    }
 }

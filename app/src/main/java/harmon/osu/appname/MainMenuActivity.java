@@ -68,4 +68,9 @@ public class MainMenuActivity extends AppCompatActivity {
         Intent i = new Intent(this,TakePictureActivity.class);
         startActivity(i);
     }
+
+    public void toPhotos(View v) {
+        Intent i = new Intent(this,PhotosActivity.class);
+        startActivity(i);
+    }
 }

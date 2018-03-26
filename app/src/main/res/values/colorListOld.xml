@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Most colors can be found on https://graf1x.com/list-of-colors-with-color-names/ -->
+<!-- This is no longer used, but contains the names for the used colors -->
+<resources>
+    <!-- YELLOW -->
+    <color name="yellow">
+        <name>Yellow</name>
+        <hex>fff200</hex>
+    </color>
+    <color name="peach">
+        <name>Peach</name>
+        <hex>ffe5b4</hex>
+    </color>
+    <color name="lemon">
+        <name>Lemon</name>
+        <hex>effd5f</hex>
+    </color>
+    <color name="flaxen">
+        <name>Flaxen</name>
+        <hex>d5b85a</hex>
+    </color>
+    <!-- ORANGE -->
+    <color name="orange">
+        <name>Orange</name>
+        <hex>fc6600</hex>
+    </color>
+    <color name="spice">
+        <name>Spice</name>
+        <hex>793802</hex>
+    </color>
+    <color name="gold">
+        <name>Gold</name>
+        <hex>f9a602</hex>
+    </color>
+    <color name="tangerine">
+        <name>Tangerine</name>
+        <hex>cf9812a</hex>
+    </color>
+    <!-- RED -->
+    <color name="red">
+        <name>Red</name>
+        <hex>d30000</hex>
+    </color>
+    <color name="maroon">
+        <name>Maroon</name>
+        <hex>800000</hex>
+    </color>
+    <color name="salmon">
+        <name>Salmon</name>
+        <hex>fa8072</hex>
+    </color>
+    <color name="raspberry">
+        <name>Raspberry</name>
+        <hex>d21f3c</hex>
+    </color>
+    <!-- PINK -->
+    <color name="pink">
+        <name>Pink</name>
+        <hex>fc0fc0</hex>
+    </color>
+    <color name="ruby">
+        <name>Ruby</name>
+        <hex>e0115f</hex>
+    </color>
+    <color name="carnation">
+        <name>Carnation</name>
+        <hex>ffa6c9</hex>
+    </color>
+    <color name="brick">
+        <name>Brick</name>
+        <hex>fb607f</hex>
+    </color>
+    <!-- VIOLET -->
+    <color name="violet">
+        <name>Violet</name>
+        <hex>b200ed</hex>
+    </color>
+    <color name="eggplant">
+        <name>Eggplant</name>
+        <hex>311432</hex>
+    </color>
+    <color name="hibiscus">
+        <name>Hibiscus</name>
+        <hex>b433757</hex>
+    </color>
+    <color name="plum">
+        <name>Plum</name>
+        <hex>8d4585</hex>
+    </color>
+    <!-- BLUE -->
+    <color name="blue">
+        <name>Blue</name>
+        <hex>0018f9</hex>
+    </color>
+    <color name="navy">
+        <name>Navy</name>
+        <hex>000080</hex>
+    </color>
+    <color name="sky">
+        <name>Sky</name>
+        <hex>95c8d8</hex>
+    </color>
+    <color name="olympic">
+        <name>Olympic</name>
+        <hex>008ecc</hex>
+    </color>
+    <!-- GREEN -->
+    <color name="green">
+        <name>Green</name>
+        <hex>3bb143</hex>
+    </color>
+    <color name="forest">
+        <name>Forest</name>
+        <hex>0b6623</hex>
+    </color>
+    <color name="mint">
+        <name>Mint</name>
+        <hex>98fb98</hex>
+    </color>
+    <color name="army">
+        <name>Army</name>
+        <hex>4b5320</hex>
+    </color>
+    <!-- BROWN -->
+    <color name="brown">
+        <name>Brown</name>
+        <hex>7c4700</hex>
+    </color>
+    <color name="tortilla">
+        <name>Tortilla</name>
+        <hex>99750</hex>
+    </color>
+    <color name="brunette">
+        <name>Brunette</name>
+        <hex>3a1f04</hex>
+    </color>
+    <color name="cinnamon">
+        <name>Cinnamon</name>
+        <hex>622a0f</hex>
+    </color>
+    <!-- WHITE GREY BLACK -->
+    <color name="white">
+        <name>White</name>
+        <hex>ffffff</hex>
+    </color>
+    <color name="gray">
+        <name>Gray</name>
+        <hex>828282</hex>
+    </color>
+    <color name="shadow">
+        <name>Shadow</name>
+        <hex>363636</hex>
+    </color>
+    <color name="black">
+        <name>Black</name>
+        <hex>000000</hex>
+    </color>
+
+</resources>

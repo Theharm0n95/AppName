@@ -7,7 +7,7 @@
     tools:context="harmon.osu.appname.AverageColorActivity">
 
     <LinearLayout
-        android:layout_width="368dp"
+        android:layout_width="match_parent"
         android:layout_height="495dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
@@ -43,6 +43,13 @@
             android:layout_height="wrap_content"
             android:onClick="toTakePicture"
             android:text="@string/retake_picture" />
+
+        <Button
+            android:id="@+id/photos_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="toPhotos"
+            android:text="@string/photos" />
 
 
     </LinearLayout>

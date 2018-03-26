@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Most colors can be found on https://graf1x.com/list-of-colors-with-color-names/ -->
+<resources>
+
+    <string-array name="colors">
+        <!-- YELLOW -->
+
+        <item>fff200</item>
+
+        <item>ffe5b4</item>
+
+        <item>effd5f</item>
+
+        <item>d5b85a</item>
+
+        <!-- ORANGE -->
+
+        <item>fc6600</item>
+
+        <item>793802</item>
+
+        <item>f9a602</item>
+
+        <item>cf9812a</item>
+
+        <!-- RED -->
+
+        <item>d30000</item>
+
+        <item>800000</item>
+
+        <item>fa8072</item>
+
+        <item>d21f3c</item>
+
+        <!-- PINK -->
+
+        <item>fc0fc0</item>
+
+        <item>e0115f</item>
+
+        <item>ffa6c9</item>
+
+        <item>fb607f</item>
+
+        <!-- VIOLET -->
+
+        <item>b200ed</item>
+
+        <item>311432</item>
+
+        <item>b433757</item>
+
+        <item>8d4585</item>
+
+        <!-- BLUE -->
+
+        <item>0018f9</item>
+
+        <item>000080</item>
+
+        <item>95c8d8</item>
+
+        <item>008ecc</item>
+
+        <!-- GREEN -->
+
+        <item>3bb143</item>
+
+        <item>0b6623</item>
+
+        <item>98fb98</item>
+
+        <item>4b5320</item>
+
+        <!-- BROWN -->
+
+        <item>7c4700</item>
+
+        <item>99750</item>
+
+        <item>3a1f04</item>
+
+        <item>622a0f</item>
+
+        <!-- WHITE GREY BLACK -->
+
+        <item>ffffff</item>
+
+        <item>828282</item>
+
+        <item>363636</item>
+
+        <item>000000</item>
+
+    </string-array>
+</resources>
