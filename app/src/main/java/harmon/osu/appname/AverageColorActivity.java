@@ -13,19 +13,27 @@ import android.view.View;
 
 public class AverageColorActivity extends AppCompatActivity {
 
+    private String file;
+
+    private String closestColor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.average_color);
         Bundle extras = getIntent().getExtras();
-        String file = extras.getString("file");
+        file = extras.getString("file");
         String averageColor = CalculateAverageColor.getAverageColor(file);
         View colorBox = (View) this.findViewById(R.id.color_square);
         colorBox.setBackgroundColor(Color.parseColor(averageColor));
-        String closestColor = FindClosestColor.getClosestColor(averageColor, this);
-        // TODO: Use closest color when playing song
+        closestColor = FindClosestColor.getClosestColor(averageColor, this);
+    }
 
+    public void toNowPlaying(View v) {
+        Intent i = new Intent(this,NowPlayingActivity.class);
+        i.putExtra("file", file);
+        i.putExtra("closestColor", closestColor);
+        startActivity(i);
     }
 
     public void toTakePicture(View v) {
