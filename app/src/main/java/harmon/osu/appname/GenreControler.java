@@ -1,3 +1,5 @@
+package harmon.osu.appname;
+
 import android.content.Context;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -26,8 +28,10 @@ public class GenreControler {
     }
 
     public void play(Context c, Uri mAudio){
-        mGenrePlayer = MediaPlayer.create(c, mAudio);
-        mGenrePlayer.start();
+        if(mGenrePlayer == null) {
+            mGenrePlayer = MediaPlayer.create(c, mAudio);
+            mGenrePlayer.start();
+        }
     }
 
     public void pause(){

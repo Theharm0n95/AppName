@@ -30,9 +30,11 @@
         <activity android:name=".PhotosActivity"
             android:parentActivityName=".MainMenuActivity"/>
         <activity android:name=".AverageColorActivity"
+
             android:parentActivityName=".MainMenuActivity"/>
         <activity android:name=".NowPlayingActivity"
-            android:parentActivityName=".MainMenuActivity"/>
+            android:parentActivityName=".MainMenuActivity"
+            />
     </application>
 
 </manifest>

@@ -27,6 +27,7 @@ public class AverageColorActivity extends AppCompatActivity {
         View colorBox = (View) this.findViewById(R.id.color_square);
         colorBox.setBackgroundColor(Color.parseColor(averageColor));
         closestColor = FindClosestColor.getClosestColor(averageColor, this);
+
     }
 
     public void toNowPlaying(View v) {
