@@ -3,6 +3,7 @@ package harmon.osu.appname;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -25,9 +26,9 @@ import java.util.Calendar;
  */
 
 public class TakePictureActivity extends AppCompatActivity {
-    final int PHOTO_CODE = 0;
+    final int PHOTO_CODE = 1;
     private static String file = "";
-    Uri outputFileUri;
+    private Uri outputFileUri;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,15 +60,11 @@ public class TakePictureActivity extends AppCompatActivity {
             }
 
         } else {
+
             Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
             cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, outputFileUri);
             startActivityForResult(cameraIntent, PHOTO_CODE);
         }
-
-
-
-
-
 
     }
 
@@ -83,7 +80,6 @@ public class TakePictureActivity extends AppCompatActivity {
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     // permission was granted
                     Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                    cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, outputFileUri);
                     startActivityForResult(cameraIntent, PHOTO_CODE);
 
                 } else {
@@ -97,26 +93,40 @@ public class TakePictureActivity extends AppCompatActivity {
                     startActivity(i);
                     finish();
                 }
+
+                break;
             }
+            default:
+                break;
 
         }
     }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        Intent i;
+
         // Check if photo was successful
         if (requestCode == PHOTO_CODE && resultCode == RESULT_OK) {
+            i = new Intent(this,AverageColorActivity.class);
+            Bitmap img = (Bitmap) data.getExtras().get("data");
+
             // Go to AverageColor
-            Intent i = new Intent(this,AverageColorActivity.class);
+
             i.putExtra("file", file);
+            i.putExtra("bitmap", img);
             startActivity(i);
             finish();
+
         } else {
+            i = new Intent(this,MainMenuActivity.class);
             File unusedFile = new File(file);
+
             // Delete unused photo file
             unusedFile.delete();
-            // Return to MainMenu
-            Intent i = new Intent(this,MainMenuActivity.class);
+
+
             startActivity(i);
             finish();
         }

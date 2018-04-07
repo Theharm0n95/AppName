@@ -17,11 +17,10 @@ public class CalculateAverageColor {
     /**
      * Returns the HEX value of the average color from filePath.
      * @requires the jpg from filePath doe not contain transparency
-     * @param filePath a path to a jpg
+     * @param bMap a Bitmap representation of an image
      * @return a HEX value of the average color
      */
-    public static String getAverageColor(String filePath) {
-        Bitmap bMap = BitmapFactory.decodeFile(filePath);
+    public static String getAverageColor(Bitmap bMap) {
         String averageColor = DEFAULT_COLOR;
         // Check if the image was null
         if(bMap != null) {

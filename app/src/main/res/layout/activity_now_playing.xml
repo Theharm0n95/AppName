@@ -27,7 +27,7 @@
             android:text="Now Playing"
             android:textSize="35sp" />
 
-        <ImageView
+        <View
             android:id="@+id/SongPhoto"
             android:layout_width="250dp"
             android:layout_height="250dp"
@@ -38,7 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:text="text"
+            android:text="Music By: BenSound"
             android:textSize="20sp" />
 
         <LinearLayout
@@ -51,7 +51,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Play" />
+                android:text="Play"
+                android:visibility="visible"/>
 
             <Button
                 android:id="@+id/next_button"
