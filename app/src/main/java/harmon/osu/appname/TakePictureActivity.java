@@ -26,7 +26,7 @@ import java.util.Calendar;
  */
 
 public class TakePictureActivity extends AppCompatActivity {
-    final int PHOTO_CODE = 1;
+    final int PHOTO_CODE = 5;
     private static String file = "";
     private Uri outputFileUri;
 
@@ -110,12 +110,12 @@ public class TakePictureActivity extends AppCompatActivity {
         // Check if photo was successful
         if (requestCode == PHOTO_CODE && resultCode == RESULT_OK) {
             i = new Intent(this,AverageColorActivity.class);
-            Bitmap img = (Bitmap) data.getExtras().get("data");
+            //Bitmap img = (Bitmap) data.getExtras().get("data");
 
             // Go to AverageColor
 
             i.putExtra("file", file);
-            i.putExtra("bitmap", img);
+            //i.putExtra("bitmap", img);
             startActivity(i);
             finish();
 
