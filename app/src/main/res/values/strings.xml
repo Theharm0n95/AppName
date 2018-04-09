@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AppName</string>
+    <string name="app_name">AudioVision</string>
     <string name="menu_font_size">35</string>
     <string name="left_just">0.124</string>
     <string name="upper_bound">.034</string>

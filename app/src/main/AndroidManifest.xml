@@ -24,6 +24,7 @@
         </activity>
         <activity
             android:name=".SettingsMenuActivity"
+            android:configChanges="screenLayout|orientation|screenSize"
             android:parentActivityName=".MainMenuActivity" />
 
         <meta-data
@@ -32,15 +33,19 @@
 
         <activity
             android:name=".TakePictureActivity"
+            android:configChanges="screenLayout|orientation|screenSize"
             android:parentActivityName=".MainMenuActivity" />
         <activity
             android:name=".PhotosActivity"
+            android:configChanges="screenLayout|orientation|screenSize"
             android:parentActivityName=".MainMenuActivity" />
         <activity
             android:name=".AverageColorActivity"
+            android:configChanges="screenLayout|orientation|screenSize"
             android:parentActivityName=".MainMenuActivity" />
         <activity
             android:name=".NowPlayingActivity"
+            android:configChanges="screenLayout|orientation|screenSize"
             android:parentActivityName=".MainMenuActivity" />
         
     </application>

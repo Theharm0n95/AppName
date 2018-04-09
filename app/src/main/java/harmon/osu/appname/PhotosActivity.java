@@ -68,6 +68,7 @@ public class PhotosActivity extends AppCompatActivity {
 
             // Go to average color activity
             Intent i = new Intent(this,AverageColorActivity.class);
+
             i.putExtra("file", file);
             startActivity(i);
             finish();

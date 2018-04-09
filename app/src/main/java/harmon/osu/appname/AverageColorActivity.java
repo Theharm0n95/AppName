@@ -26,7 +26,8 @@ public class AverageColorActivity extends AppCompatActivity {
         setContentView(R.layout.average_color);
         Intent i = getIntent();
         Bundle extras = i.getExtras();
-        bMap = (Bitmap) i.getParcelableExtra("bitmap");
+        String file = extras.getString("file");
+        Bitmap bMap = BitmapFactory.decodeFile(file);
 
         String averageColor = CalculateAverageColor.getAverageColor(bMap);
         View colorBox = (View) this.findViewById(R.id.color_square);
