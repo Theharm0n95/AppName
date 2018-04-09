@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="auto_play_preference"
+        android:title="Auto-Play" />
+    <PreferenceScreen
+        android:key="genre_settings"
+        android:title="Genre Settings">
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/genre_options"
+            android:entryValues="@array/genre_values"
+            android:key="genre_red_setting"
+            android:title="Red Genre"/>
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/genre_options"
+            android:entryValues="@array/genre_values"
+            android:key="genre_orange_setting"
+            android:title="Orange Genre"/>
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/genre_options"
+            android:entryValues="@array/genre_values"
+            android:key="genre_yellow_setting"
+            android:title="Yellow Genre"/>
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/genre_options"
+            android:entryValues="@array/genre_values"
+            android:key="genre_green_setting"
+            android:title="Green Genre"/>
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/genre_options"
+            android:entryValues="@array/genre_values"
+            android:key="genre_red_setting"
+            android:title="Blue Genre"/>
+    </PreferenceScreen>
+
+</PreferenceScreen>

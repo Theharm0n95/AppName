@@ -1,19 +1,22 @@
 package harmon.osu.appname;
 
+import android.app.Activity;
+import android.preference.PreferenceActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.os.Bundle;
 
-public class SettingsMenuActivity extends AppCompatActivity {
+public class SettingsMenuActivity extends Activity {
 
     private String TAG = "SettingsMenu";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.settings_menu);
-
+        getFragmentManager().beginTransaction()
+                .replace(android.R.id.content, new SettingsFragment())
+                .commit();
     }
 
 

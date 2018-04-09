@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.preference.PreferenceFragment;
+import android.preference.PreferenceManager;
 import android.provider.CalendarContract;
 import android.provider.MediaStore;
 import android.util.Log;
@@ -36,6 +38,7 @@ public class MainMenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_menu);
+        PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
 
         mSettingsButton = (Button) findViewById(R.id.settings_menu_button);
         mTakePictureButton = (Button) findViewById(R.id.take_picture_menu_button);

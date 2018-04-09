@@ -18,12 +18,15 @@ public class AudioPlayer {
         genreId = genre;
         songId = 0;
         audioContext = c;
+
+        mAudio = MediaPlayer.create(audioContext, songList[genreId][songId]);
+        mAudio.prepareAsync();
     }
 
     public void play(){
-        stop();
-
-        mAudio = MediaPlayer.create(audioContext, songList[genreId][songId]);
+        if(mAudio == null){
+            mAudio = MediaPlayer.create(audioContext, songList[genreId][songId]);
+        }
 
         mAudio.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
@@ -37,13 +40,33 @@ public class AudioPlayer {
         mAudio.start();
     }
 
+    public void pause(){
+        if(mAudio != null){
+            mAudio.pause();
+        }
+    }
+
+    public void resume(){
+        if(mAudio != null){
+            mAudio.start();
+        }
+    }
+
     public void next(){
         if(mAudio != null){
             stop();
+            mAudio = null;
         }
 
-        songId++;
-        play();
+        mAudio = MediaPlayer.create(audioContext, songList[genreId][(++songId % songList[genreId].length)]);
+        mAudio.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mediaPlayer) {
+                play();
+            }
+        });
+
+        mAudio.prepareAsync();
 
     }
 
@@ -54,9 +77,19 @@ public class AudioPlayer {
         }
     }
 
+    public boolean hasAudioLoaded(){
+        return (mAudio != null);
+    }
+
     private int songList[][] = {
             {R.raw.electonica_house, R.raw.electronica_dubstep, R.raw.electronica_endless},
             {R.raw.rock_beginning, R.raw.rock_higher},
             {R.raw.acoustic_breeze, R.raw.acoustic_remember}
+    };
+
+    private String songName[][] = {
+            {"House", "Dubstep", "Endless"},
+            {"Beginning", "Higher"},
+            {"Breeze", "Remember"}
     };
 }

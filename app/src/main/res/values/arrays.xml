@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="color_options">
+        <item>Red</item>
+        <item>Orange</item>
+        <item>Yellow</item>
+        <item>Green</item>
+        <item>Blue</item></string-array>
+
+    <integer-array name="color_values">
+        <item>@color/red</item>
+        <item>@color/orange</item>
+        <item>@color/orange</item>
+        <item>@color/green</item>
+        <item>@color/blue</item>
+    </integer-array>
+
+    <string-array name="genre_options">
+        <item>Electonica</item>
+        <item>Rock</item>
+        <item>Acoustic</item>
+    </string-array>
+
+    <integer-array name="genre_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </integer-array>
+</resources>

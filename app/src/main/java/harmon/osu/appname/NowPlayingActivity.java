@@ -1,6 +1,8 @@
 package harmon.osu.appname;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class NowPlayingActivity extends AppCompatActivity {
+    private SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
     private String closestColor;
     private int genre = 0;
     private int avgColorVal;
@@ -48,29 +51,13 @@ public class NowPlayingActivity extends AppCompatActivity {
         });
 
         if(closestColor != null){
-            switch(closestColor){
-                case "electronica": {
-                    break;
-                }
-                case "rock": {
-                    genre = 1;
-                    break;
-                }
-                case "acoustic": {
-                    genre = 2;
-                    break;
-                }
-                default:{
-                    break;
-                }
-
-            }
+            String key = "genre_" + closestColor + "_setting";
+            genre = pref.getInt(key, 0);
         }
 
         mGenrePlayer = new AudioPlayer(this, genre);
 
         if(getIntent().getExtras().getBoolean("play")){
-            genre = 1;
             mGenrePlayer = new AudioPlayer(this, genre);
             playClick();
         }
@@ -78,8 +65,33 @@ public class NowPlayingActivity extends AppCompatActivity {
     }
 
     public void playClick(){
-        mGenrePlayer.play();
+        if(mGenrePlayer.hasAudioLoaded()) {
+            mGenrePlayer.resume();
+        } else {
+            mGenrePlayer.play();
+        }
+
+        mPlayPauseButton.setText("Pause");
+        mPlayPauseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                pauseClick();
+            }
+        });
     }
+
+    public void pauseClick(){
+        mGenrePlayer.pause();
+
+        mPlayPauseButton.setText("Play");
+        mPlayPauseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+    }
+
 
     public void nextClick(){
         mGenrePlayer.next();

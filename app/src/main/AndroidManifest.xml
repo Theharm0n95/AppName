@@ -42,6 +42,8 @@
         <activity
             android:name=".NowPlayingActivity"
             android:parentActivityName=".MainMenuActivity" />
+        
     </application>
+
 
 </manifest>

@@ -42,6 +42,7 @@ public class TakePictureActivity extends AppCompatActivity {
         file = dir + time +".jpg";
         File newfile = new File(file);
 
+
         try {
             newfile.createNewFile();
         }
@@ -60,12 +61,16 @@ public class TakePictureActivity extends AppCompatActivity {
             }
 
         } else {
-
             Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
             cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, outputFileUri);
             startActivityForResult(cameraIntent, PHOTO_CODE);
         }
 
+    }
+
+    public void capture(){
+        Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        startActivityForResult(cameraIntent, PHOTO_CODE);
     }
 
     @Override
