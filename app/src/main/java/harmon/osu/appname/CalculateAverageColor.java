@@ -13,6 +13,8 @@ import android.widget.ImageView;
 public class CalculateAverageColor {
     // The default color when the color can not be obtained.
     private final static String DEFAULT_COLOR = "#000000";
+    // The amount of pixels to skip when obtaining color.
+    private final static int SKIPRATE = 11;
 
     /**
      * Returns the HEX value of the average color from filePath.
@@ -33,7 +35,7 @@ public class CalculateAverageColor {
             // Loop through each pixel and add heir red, green, and blue to the buckets
             for (int y = 0, h = bMap.getHeight(); y < h; y++)
             {
-                for (int x = 0, w = bMap.getWidth(); x < w; x++)
+                for (int x = 0, w = bMap.getWidth(); x < w; x=x+SKIPRATE)
                 {
                     int c = pixels[x + y * w];
                     redBucket += Color.red(c);
