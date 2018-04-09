@@ -32,7 +32,7 @@ public class FindClosestColor {
         /*
          * Get the first color in colorList, take it's distance from the given color.
          */
-        String[] colors = context.getResources().getStringArray(R.array.colors);
+        String[] colors = context.getResources().getStringArray(R.array.choices_vals);
 
         int colorInList = (int)Long.parseLong(colors[0], 16);
         int redDist = Math.abs(RED - ((colorInList >> 16) & 0xFF) );

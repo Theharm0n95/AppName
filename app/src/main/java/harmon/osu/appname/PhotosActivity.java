@@ -2,6 +2,7 @@ package harmon.osu.appname;
 
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -69,7 +70,7 @@ public class PhotosActivity extends AppCompatActivity {
             // Go to average color activity
             Intent i = new Intent(this,AverageColorActivity.class);
 
-            i.putExtra("file", file);
+            i.putExtra("bitmap", BitmapFactory.decodeFile(file));
             startActivity(i);
             finish();
         }

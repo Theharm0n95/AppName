@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -121,8 +122,11 @@ public class TakePictureActivity extends AppCompatActivity {
 
             // Go to AverageColor
 
-            i.putExtra("file", file);
-            i.putExtra("bitmap", img);
+            if(Build.VERSION.SDK_INT < 23){
+                i.putExtra("bitmap", BitmapFactory.decodeFile(file));
+            } else {
+                i.putExtra("bitmap", img);
+            }
             startActivity(i);
             finish();
 

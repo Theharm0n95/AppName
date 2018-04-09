@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="choices">
+        <item>@color/red</item>
+        <item>@color/orange</item>
+        <item>@color/yellow</item>
+        <item>@color/green</item>
+        <item>@color/blue</item>
+    </string-array>
+
+    <string-array name="choices_vals">
+        <item>d30000</item>
+        <item>fc6600</item>
+        <item>fff200</item>
+        <item>3bb143</item>
+        <item>0018f9</item>
+    </string-array>
+</resources>
