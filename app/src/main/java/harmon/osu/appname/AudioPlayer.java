@@ -15,27 +15,33 @@ public class AudioPlayer {
 
 
     public AudioPlayer(Context c, int genre){
-        genreId = genre;
+        genreId = genre % songList.length;
         songId = 0;
         audioContext = c;
 
         mAudio = MediaPlayer.create(audioContext, songList[genreId][songId]);
-        mAudio.prepareAsync();
+        mAudio.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                if((songId + 1) < songList[genreId].length){
+                    next();
+                }
+            }
+        });
     }
 
     public void play(){
         if(mAudio == null){
             mAudio = MediaPlayer.create(audioContext, songList[genreId][songId]);
-        }
-
-        mAudio.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            @Override
-            public void onCompletion(MediaPlayer mediaPlayer) {
-                if((songId % songList[genreId].length != 0) && songId != 0){
-                    next();
+            mAudio.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                @Override
+                public void onCompletion(MediaPlayer mediaPlayer) {
+                    if((songId + 1) < songList[genreId].length){
+                        next();
+                    }
                 }
-            }
-        });
+            });
+        }
 
         mAudio.start();
     }
@@ -46,28 +52,14 @@ public class AudioPlayer {
         }
     }
 
-    public void resume(){
-        if(mAudio != null){
-            mAudio.start();
-        }
-    }
-
     public void next(){
         if(mAudio != null){
             stop();
-            mAudio = null;
         }
 
-        mAudio = MediaPlayer.create(audioContext, songList[genreId][(++songId % songList[genreId].length)]);
-        mAudio.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-            @Override
-            public void onPrepared(MediaPlayer mediaPlayer) {
-                play();
-            }
-        });
-
-        mAudio.prepareAsync();
-
+        if (++songId < songList[genreId].length){
+            play();
+        }
     }
 
     public void stop(){
@@ -77,19 +69,14 @@ public class AudioPlayer {
         }
     }
 
-    public boolean hasAudioLoaded(){
-        return (mAudio != null);
-    }
-
     private int songList[][] = {
             {R.raw.electonica_house, R.raw.electronica_dubstep, R.raw.electronica_endless},
             {R.raw.rock_beginning, R.raw.rock_higher},
             {R.raw.acoustic_breeze, R.raw.acoustic_remember}
     };
 
-    private String songName[][] = {
-            {"House", "Dubstep", "Endless"},
-            {"Beginning", "Higher"},
-            {"Breeze", "Remember"}
-    };
+    public boolean isPlaying(){
+       return (mAudio != null);
+    }
+
 }

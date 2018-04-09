@@ -70,7 +70,7 @@ public class MainMenuActivity extends AppCompatActivity {
         mNowPlayingButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                toNowPlaying(R.color.army, true);
+                toNowPlaying(R.color.black, true);
             }
         });
 

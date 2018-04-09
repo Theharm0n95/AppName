@@ -24,6 +24,7 @@ public class AverageColorActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.average_color);
+
         Intent i = getIntent();
         Bundle extras = i.getExtras();
         String file = extras.getString("file");

@@ -58,6 +58,8 @@ public class TakePictureActivity extends AppCompatActivity {
                 ActivityCompat.requestPermissions(this,
                         new String[]{Manifest.permission.CAMERA},
                         1);
+            } else {
+                capture();
             }
 
         } else {
@@ -115,12 +117,12 @@ public class TakePictureActivity extends AppCompatActivity {
         // Check if photo was successful
         if (requestCode == PHOTO_CODE && resultCode == RESULT_OK) {
             i = new Intent(this,AverageColorActivity.class);
-            //Bitmap img = (Bitmap) data.getExtras().get("data");
+            Bitmap img = (Bitmap) data.getExtras().get("data");
 
             // Go to AverageColor
 
             i.putExtra("file", file);
-            //i.putExtra("bitmap", img);
+            i.putExtra("bitmap", img);
             startActivity(i);
             finish();
 
@@ -130,7 +132,6 @@ public class TakePictureActivity extends AppCompatActivity {
 
             // Delete unused photo file
             unusedFile.delete();
-
 
             startActivity(i);
             finish();
