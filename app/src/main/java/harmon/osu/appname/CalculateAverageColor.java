@@ -35,7 +35,7 @@ public class CalculateAverageColor {
             // Loop through each pixel and add heir red, green, and blue to the buckets
             for (int y = 0, h = bMap.getHeight(); y < h; y++)
             {
-                for (int x = 0, w = bMap.getWidth(); x < w; x=x+SKIPRATE)
+                for (int x = 0, w = bMap.getWidth(); x < w; x++)
                 {
                     int c = pixels[x + y * w];
                     redBucket += Color.red(c);
