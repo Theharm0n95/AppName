@@ -34,7 +34,7 @@
             android:key="genre_green_setting"
             android:title="Green Genre" />
         <ListPreference
-            android:defaultValue="1"
+            android:defaultValue="2"
             android:entries="@array/genre_options"
             android:entryValues="@array/genre_values"
             android:key="genre_blue_setting"
